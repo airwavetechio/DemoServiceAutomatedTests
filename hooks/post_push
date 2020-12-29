@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+# Parse image name for repo name
+docker tag $IMAGE_NAME $DOCKER_REPO:$SOURCE_BRANCH-$SOURCE_COMMIT
+docker push $DOCKER_REPO:$SOURCE_BRANCH-$SOURCE_COMMIT
